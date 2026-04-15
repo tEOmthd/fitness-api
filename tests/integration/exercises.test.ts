@@ -3,7 +3,7 @@ import express from "express";
 import Database from "better-sqlite3";
 import jwt from "jsonwebtoken";
 import { ExerciseDAO } from "../../src/dao/ExerciseDAO";
-import { exerciseRoutes } from "../../src/routes/exercice.routes";
+import { exerciseRoutes } from "../../src/routes/exercise.routes";
 import { createTestDB, seedTestDB, cleanupTestDB } from "./setup";
 
 describe("Exercises Integration Tests", () => {

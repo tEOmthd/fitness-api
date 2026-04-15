@@ -13,9 +13,9 @@ import { AuthService } from "./services/authService";
 
 import { usersRoutes } from "./routes/users.routes";
 import { authRoutes } from "./routes/auth.routes";
-import { exerciseRoutes } from "./routes/exercice.routes";
+import { exerciseRoutes } from "./routes/exercise.routes";
 import { workoutRoutes } from "./routes/workout.routes";
-import { workoutExerciseRoutes } from "./routes/workoutExercice.routes";
+import { workoutExerciseRoutes } from "./routes/workoutExercise.routes";
 
 const app = express();
 app.use(express.json());

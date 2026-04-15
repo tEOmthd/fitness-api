@@ -3,7 +3,7 @@ import {
   WorkoutExercise,
   CreateWorkoutExerciseDTO,
   UpdateWorkoutExerciseDTO,
-} from "../models/woroutExercice";
+} from "../models/workoutExercise";
 
 export class WorkoutExerciseDAO {
   private db: Database.Database;

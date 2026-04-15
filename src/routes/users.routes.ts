@@ -5,6 +5,7 @@ import {
   AuthenticatedRequest,
 } from "../middlewares/authenticateToken";
 import { authorizeRole } from "../middlewares/authorizeRole";
+import { UserResponse } from "../models/user";
 import bcrypt from "bcryptjs";
 
 export function usersRoutes(userDAO: UserDAO) {
@@ -41,7 +42,8 @@ export function usersRoutes(userDAO: UserDAO) {
       const user = userDAO.findById(id);
       if (!user) return res.status(404).json({ error: "Not found" });
 
-      res.json(user);
+      const { password: _pwd, ...userResponse } = user;
+      res.json(userResponse as UserResponse);
     } catch (err: any) {
       console.error("GET /users/:id error:", err.message);
       res.status(500).json({ error: err.message });
